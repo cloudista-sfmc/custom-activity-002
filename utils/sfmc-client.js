@@ -32,7 +32,17 @@ const saveData = async (externalKey, data) => client.post({
   body: data,
 });
 
+const addData = async (externalKey, data) => client.post({
+  uri: `/data/v1/async/dataextensions/key:${externalKey}/rows`,
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  json: true,
+  body: data
+});
+
 module.exports = {
   client,
   saveData,
+  addData,
 };

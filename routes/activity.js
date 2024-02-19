@@ -16,8 +16,9 @@ exports.execute = async (req, res) => {
   logger.info(data);
 
   try {
-    const id = Uuidv1();
+    //const id = Uuidv1();
 
+    /*
     await SFClient.saveData(process.env.DATA_EXTENSION_EXTERNAL_KEY, [
       {
         keys: {
@@ -30,6 +31,16 @@ exports.execute = async (req, res) => {
         },
       },
     ]);
+    */
+
+    await SFClient.addData(process.env.DATA_EXTENSION_EXTERNAL_KEY, {
+      items: [{
+        SubscriberKey: data.inArguments[0].contactKey,
+        JourneyVersionId: Context.PublicationId,
+        TrackingMessage: data.inArguments[0].DropdownOptions,
+        JourneyStage: data.inArguments[0].DropdownOptions
+      }]
+    });
   } catch (error) {
     logger.error(error);
   }

@@ -16,17 +16,17 @@ block content
     .slds-card__body.slds-card__body_inner
       form.js-settings-form
         .slds-form-element
-          label.slds-form-element__label(for="DropdownOptions") Type
+          label.slds-form-element__label(for="DropdownOptions") Stage
           .slds-form-element__control
             .slds-select_container
               select#DropdownOptions.slds-select.js-activity-setting(name='dropdownOptions')
                 each dropdownOption in dropdownOptions
                   option(value=dropdownOption.value)= dropdownOption.name
               
-          label.slds-form-element__label.slds-p-top_medium(for='Text')
+          label.slds-form-element__label.slds-p-top_medium(for='TrackingMessage')
             abbr.slds-required(title='required')
-            | Text *
+            | Tracking Message *
           .slds-form-element__control
-            input#Text.slds-input.js-activity-setting(required='', placeholder='', name='text')
-
+            input#TrackingMessage.slds-input.js-activity-setting(required='', placeholder='', name='TrackingMessage')
+            
     footer.slds-card__footer
