@@ -36,8 +36,8 @@ exports.execute = async (req, res) => {
     await SFClient.addData(process.env.DATA_EXTENSION_EXTERNAL_KEY, {
       items: [{
         SubscriberKey: data.inArguments[0].contactKey,
-        JourneyVersionId: data.journeyId,
-        TrackingMessage: data.inArguments[0].DropdownOptions,
+        JourneyVersionId: data.definitionInstanceId,
+        TrackingMessage: data.inArguments[0].TrackingMessage,
         JourneyStage: data.inArguments[0].DropdownOptions
       }]
     });
