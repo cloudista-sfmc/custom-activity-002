@@ -33,12 +33,13 @@ exports.execute = async (req, res) => {
     ]);
     */
 
-    await SFClient.addData(process.env.DATA_EXTENSION_EXTERNAL_KEY, {
+    await SFClient.addData(data.inArguments[0].DataExtensionCustomerKey, {
       items: [{
         SubscriberKey: data.inArguments[0].contactKey,
-        JourneyVersionId: data.definitionInstanceId,
+        JourneyVersionId: data.activityId,
         TrackingMessage: data.inArguments[0].TrackingMessage,
-        JourneyStage: data.inArguments[0].DropdownOptions
+        JourneyStage: data.inArguments[0].DropdownOptions,
+        MID: process.env.SFMC_ACCOUNT_ID
       }]
     });
   } catch (error) {

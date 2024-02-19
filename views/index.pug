@@ -23,6 +23,12 @@ block content
                 each dropdownOption in dropdownOptions
                   option(value=dropdownOption.value)= dropdownOption.name
               
+          label.slds-form-element__label.slds-p-top_medium(for='DataExtensionCustomerKey')
+            abbr.slds-required(title='required')
+            | Data Extension CustomerKey *
+          .slds-form-element__control
+            input#DataExtensionCustomerKey.slds-input.js-activity-setting(required='', placeholder='', name='DataExtensionCustomerKey')
+
           label.slds-form-element__label.slds-p-top_medium(for='TrackingMessage')
             abbr.slds-required(title='required')
             | Tracking Message *
