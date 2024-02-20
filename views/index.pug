@@ -6,7 +6,7 @@ block content
       header.slds-media.slds-media_center.slds-has-flexi-truncate
         .slds-media__figure
           span.slds-icon_container.slds-icon-utility-record_create(title="record_create")
-            svg.slds-icon.slds-icon_small(aria-hidden="true")
+            svg.slds-icon(aria-hidden="true")
               use(xlink:href="/icons/utility-sprite/svg/symbols.svg#record_create")
             span.slds-assistive-text Add Tracking Details
         .slds-media__body
@@ -26,9 +26,9 @@ block content
           label.slds-form-element__label.slds-p-top_medium(for='DataExtensionCustomerKey')
             abbr.slds-required(title='required')
             | Data Extension CustomerKey *
+            span.slds-badge Make sure you use Data Extension CustomerKey and not Name
           .slds-form-element__control
             input#DataExtensionCustomerKey.slds-input.js-activity-setting(required='', placeholder='', name='DataExtensionCustomerKey')
-            span.slds-badge.slds-theme_warning Make sure you use Data Extension CustomerKey and not Name
 
           label.slds-form-element__label.slds-p-top_medium(for='TrackingMessage')
             abbr.slds-required(title='required')
