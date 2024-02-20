@@ -1,7 +1,7 @@
 {
   "workflowApiVersion": "1.1",
   "metaData": {
-    "icon": "icons/standard/record_60.png"
+    "icon": "images/record_120.png"
   },
   "type": "REST",
   "lang": {
