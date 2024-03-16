@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const SFSSJS = require('../utils/sfmc-ssjs');
+//const SFSSJS = require('../utils/sfmc-ssjs');
 
 /**
  * Render Config
@@ -47,7 +47,7 @@ exports.ui = (req, res) => {
       {
         name: 'Test DE 2',
         value: 'TestDE2',
-      },
+      }
     ]
   });
 };
