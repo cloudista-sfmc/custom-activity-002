@@ -36,6 +36,6 @@ exports.ui = (req, res) => {
         name: 'Journey Exit',
         value: 'journeyExit',
       },
-    ]
+    ],
   });
 };
