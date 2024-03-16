@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-//const SFSSJS = require('../utils/sfmc-ssjs');
+const SF_SSJS = require('../utils/sfmc-ssjs');
 
 /**
  * Render Config
@@ -38,7 +38,7 @@ exports.ui = (req, res) => {
         value: 'journeyExit',
       },
     ],
-    //DElist: SFSSJS.dropdownListDE,
+    DElist_2: SF_SSJS.dropdownListDE,
     DElist: [
       {
         name: 'Test DE 1',
@@ -47,7 +47,7 @@ exports.ui = (req, res) => {
       {
         name: 'Test DE 2',
         value: 'TestDE2',
-      }
-    ]
+      },
+    ],
   });
 };
