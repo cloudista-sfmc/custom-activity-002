@@ -38,6 +38,16 @@ exports.ui = (req, res) => {
         value: 'journeyExit',
       },
     ],
-    DElist: SFSSJS.dropdownListDE
+    //DElist: SFSSJS.dropdownListDE,
+    DElist: [
+      {
+        name: 'Test DE 1',
+        value: 'TestDE1',
+      },
+      {
+        name: 'Test DE 2',
+        value: 'TestDE2',
+      },
+    ]
   });
 };
