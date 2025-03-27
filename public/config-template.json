@@ -11,6 +11,14 @@
   },
   "arguments": {
     "execute": {
+      "inArguments": [
+        {
+          "email": "{{Contact.AttributeName.Email}}",
+          "firstName": "{{Contact.AttributeName.FirstName}}",
+          "customField": "{{Event.SG_API_Test_User.PlatformStoreID}}"
+        }
+      ],
+      "outArguments": [],
       "url": "https://$DOMAIN/journey/execute",
       "verb": "POST",
       "body": "",
