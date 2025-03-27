@@ -3,6 +3,9 @@ const JWT = require('../utils/jwtDecoder');
 const SFClient = require('../utils/sfmc-client');
 const logger = require('../utils/logger');
 
+// Data variables for activities
+var DECustomerKey = "CustomActivity_002";
+
 /**
  * The Journey Builder calls this method for each contact processed by the journey.
  * @param req
@@ -33,7 +36,7 @@ exports.execute = async (req, res) => {
     ]);
     */
 
-    await SFClient.addData(data.inArguments[0].DataExtensionCustomerKey, {
+    await SFClient.addData(DECustomerKey, {
       items: [{
         SubscriberKey: data.inArguments[0].contactKey,
         JourneyVersionId: data.journeyId,
