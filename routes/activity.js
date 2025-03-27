@@ -38,13 +38,13 @@ exports.execute = async (req, res) => {
 
     await SFClient.addData(DECustomerKey, {
       items: [{
-        SubscriberKey: data.inArguments[3].contactKey,
+        SubscriberKey: data.inArguments[0].contactKey,
         JourneyVersionId: data.journeyId,
-        TrackingMessage: data.inArguments[3].TrackingMessage,
-        JourneyStage: data.inArguments[3].DropdownOptions,
+        TrackingMessage: data.inArguments[0].TrackingMessage,
+        JourneyStage: data.inArguments[0].DropdownOptions,
         MID: process.env.SFMC_ACCOUNT_ID,
-        PLatformId: data.inArguments[2].customField,
-        fn: data.inArguments[1].firstName,
+        PLatformId: data.inArguments[0].customField,
+        fn: data.inArguments[0].firstName,
         email: data.inArguments[0].email
       }]
     });

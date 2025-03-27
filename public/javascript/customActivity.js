@@ -107,7 +107,10 @@ function save() {
 
         payload['arguments'].execute.inArguments = [
             {
-                "contactKey": "{{Contact.Key}}"
+                "contactKey": "{{Contact.Key}}",
+                "email": "{{Contact.AttributeName.Email}}",
+                "firstName": "{{Contact.AttributeName.FirstName}}",
+                "customField": "{{Event.SG_API_Test_User.PlatformStoreID}}"
             }
         ];
 
