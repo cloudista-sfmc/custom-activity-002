@@ -43,9 +43,11 @@ exports.execute = async (req, res) => {
         TrackingMessage: data.inArguments[0].TrackingMessage,
         JourneyStage: data.inArguments[0].DropdownOptions,
         MID: process.env.SFMC_ACCOUNT_ID,
+        /*
         PLatformId: data.inArguments[0].customField,
         fn: data.inArguments[0].firstName,
         email: data.inArguments[0].email
+        */
       }]
     });
   } catch (error) {
