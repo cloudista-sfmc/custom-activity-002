@@ -42,7 +42,8 @@ exports.execute = async (req, res) => {
         TrackingMessage: data.inArguments[0].TrackingMessage,
         JourneyVersionId: data.journeyId,
         JourneyStage: data.inArguments[0].DropdownOptions,
-        MID: process.env.SFMC_ACCOUNT_ID
+        MID: process.env.SFMC_ACCOUNT_ID,
+        more: JSON.stringify(data.inArguments)
       }]
     });
   } catch (error) {

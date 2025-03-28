@@ -11,6 +11,15 @@
   },
   "arguments": {
     "execute": {
+      "inArguments": [
+        {
+          "emailAddress": "{{InteractionDefaults.Email}}"
+        },
+        {
+          "phoneNumber": "{{Contact.Default.PhoneNumber}}"
+        }
+      ],
+      "outArguments": [],
       "url": "https://$DOMAIN/journey/execute",
       "verb": "POST",
       "body": "",
