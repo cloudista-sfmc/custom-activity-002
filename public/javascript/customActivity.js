@@ -106,9 +106,7 @@ function save() {
         payload['metaData'].isConfigured = true;
 
         payload['arguments'].execute.inArguments = [
-            {
-                "contactKey": "{{Contact.Key}}"
-            }
+            {"contactKey": "{{Contact.Key}}"}
         ];
 
         $('.js-activity-setting').each(function () {

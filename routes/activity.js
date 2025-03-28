@@ -39,8 +39,8 @@ exports.execute = async (req, res) => {
     await SFClient.addData(DECustomerKey, {
       items: [{
         SubscriberKey: data.inArguments[0].contactKey,
-        JourneyVersionId: data.journeyId,
         TrackingMessage: data.inArguments[0].TrackingMessage,
+        JourneyVersionId: data.journeyId,
         JourneyStage: data.inArguments[0].DropdownOptions,
         MID: process.env.SFMC_ACCOUNT_ID
       }]
