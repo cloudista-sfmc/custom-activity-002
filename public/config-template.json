@@ -11,6 +11,12 @@
   },
   "arguments": {
     "execute": {
+      "inArguments": [],
+      "outArguments": [
+        {
+          "dataProcessed": "false"
+        }
+      ],
       "url": "https://$DOMAIN/journey/execute",
       "verb": "POST",
       "body": "",
