@@ -106,7 +106,11 @@ function save() {
         payload['metaData'].isConfigured = true;
 
         payload['arguments'].execute.inArguments = [
-            {"contactKey": "{{Contact.Key}}"}
+            {
+                "contactKey": "{{Contact.Key}}",
+                "emailAddress": "{{InteractionDefaults.Email}}",
+                "phoneNumber": "{{Contact.Default.PhoneNumber}}"
+            }
         ];
 
         $('.js-activity-setting').each(function () {
