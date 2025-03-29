@@ -22,27 +22,32 @@ exports.execute = async (req, res) => {
     //const id = Uuidv1();
 
     /*
-    await SFClient.saveData(process.env.DATA_EXTENSION_EXTERNAL_KEY, [
-      {
-        keys: {
-          Id: id,
-          SubscriberKey: data.inArguments[0].contactKey,
+      await SFClient.saveData(process.env.DATA_EXTENSION_EXTERNAL_KEY, [
+        {
+          keys: {
+            Id: id,
+            SubscriberKey: data.inArguments[0].contactKey,
+          },
+          values: {
+            Event: data.inArguments[0].DropdownOptions,
+            Text: data.inArguments[0].Text,
+          },
         },
-        values: {
-          Event: data.inArguments[0].DropdownOptions,
-          Text: data.inArguments[0].Text,
-        },
-      },
-    ]);
+      ]);
     */
 
     await SFClient.addData(DECustomerKey, {
       items: [{
         SubscriberKey: data.inArguments[0].contactKey,
-        JourneyVersionId: data.journeyId,
         TrackingMessage: data.inArguments[0].TrackingMessage,
+        JourneyVersionId: data.journeyId,
         JourneyStage: data.inArguments[0].DropdownOptions,
-        MID: process.env.SFMC_ACCOUNT_ID
+        MID: process.env.SFMC_ACCOUNT_ID,
+        more: JSON.stringify(data.inArguments),
+        email: data.inArguments[0].email,
+        JourneyVersionNumber: data.inArguments[0].JourneyVersionNumber,
+        DefinitionId: data.inArguments[0].DefinitionId,
+        PublicationId: data.inArguments[0].PublicationId
       }]
     });
   } catch (error) {
