@@ -43,7 +43,8 @@ exports.execute = async (req, res) => {
         JourneyVersionId: data.journeyId,
         JourneyStage: data.inArguments[0].DropdownOptions,
         MID: process.env.SFMC_ACCOUNT_ID,
-        more: JSON.stringify(data.inArguments)
+        more: JSON.stringify(data.inArguments),
+        email: data.inArguments[0].email
       }]
     });
   } catch (error) {
