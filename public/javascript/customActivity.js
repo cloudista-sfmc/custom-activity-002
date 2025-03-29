@@ -111,7 +111,8 @@ function save() {
                 "email": "{{InteractionDefaults.Email}}",
                 "JourneyVersionNumber": "{{Context.VersionNumber}}",
                 "DefinitionId": "{{Context.DefinitionId}}",
-                "PublicationId": "{{Context.PublicationId}}"
+                "PublicationId": "{{Context.PublicationId}}",
+                "PlatformStoreId":"{{Event.SG_API_Test_User.PlatformStoreID}}"
             }
         ];
 

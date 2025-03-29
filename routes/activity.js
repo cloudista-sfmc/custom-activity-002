@@ -47,7 +47,8 @@ exports.execute = async (req, res) => {
         email: data.inArguments[0].email,
         JourneyVersionNumber: data.inArguments[0].JourneyVersionNumber,
         DefinitionId: data.inArguments[0].DefinitionId,
-        PublicationId: data.inArguments[0].PublicationId
+        PublicationId: data.inArguments[0].PublicationId,
+        PLatformId: data.inArguments[0].PlatformStoreId
       }]
     });
   } catch (error) {
