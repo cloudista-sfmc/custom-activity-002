@@ -109,9 +109,9 @@ function save() {
             {
                 "contactKey": "{{Contact.Key}}",
                 "email": "{{InteractionDefaults.Email}}",
-                "JourneyVersionNumber": "Context.VersionNumber",
-                "DefinitionId": "Context.DefinitionId",
-                "PublicationId": "Context.PublicationId"
+                "JourneyVersionNumber": "{{Context.VersionNumber}}",
+                "DefinitionId": "{{Context.DefinitionId}}",
+                "PublicationId": "{{Context.PublicationId}}"
             }
         ];
 
