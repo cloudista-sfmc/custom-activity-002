@@ -107,13 +107,15 @@ function save() {
 
         payload['arguments'].execute.inArguments = [
             {
+                // Context information
                 "contactKey": "{{Contact.Key}}",
                 "email": "{{InteractionDefaults.Email}}",
                 "JourneyVersionNumber": "{{Context.VersionNumber}}",
                 "DefinitionId": "{{Context.DefinitionId}}",
                 "PublicationId": "{{Context.PublicationId}}",
-                "PlatformStoreId":"{{Event.SG_API_Test_User.PlatformStoreID}}",
-                "PlatformStoreId2":"{{Event.EventDefinitionKey.PlatformStoreID}}"
+
+                // Journey Data Attributes
+                "PlatformStoreId":"{{Event.EventDefinitionKey.PlatformStoreID}}"
             }
         ];
 
