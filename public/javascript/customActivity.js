@@ -112,7 +112,8 @@ function save() {
                 "JourneyVersionNumber": "{{Context.VersionNumber}}",
                 "DefinitionId": "{{Context.DefinitionId}}",
                 "PublicationId": "{{Context.PublicationId}}",
-                "PlatformStoreId":"{{Event.SG_API_Test_User.PlatformStoreID}}"
+                "PlatformStoreId":"{{Event.SG_API_Test_User.PlatformStoreID}}",
+                "PlatformStoreId2":"{{Event.EventDefinitionKey.PlatformStoreID}}"
             }
         ];
 
